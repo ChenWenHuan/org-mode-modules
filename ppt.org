@@ -1,0 +1,138 @@
+#+TITLE:     Word Epoch Disambiguation
+#+AUTHOR:    Authors: Mihalcea and Nastase \\Presented by Saheel
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Copenhagen}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+EMAIL:     saheelram@saheelram-K53SC
+#+DATE:      2012-09-14 Fri
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
+
+
+* Introduction
+** Language -- a constant?
+\pause
+*** Sense change, context change, new words, etc.
+*** "run", "gay", "photography"
+\pause
+** Study of Language as an evolutionary phenomenon
+\pause
+*** Requires large amounts of non-contemporary data
+*** Google Books and Google Ngrams?
+
+* Introduction -- contd.
+** Quantify changes in word usage due to
+\pause
+*** Sense change
+*** Frequency change
+*** Change in co-occuring topics
+*** ...
+\pause
+** Using Google Books
+*** 3 epochs: 1800+/-25 yrs, 1900+/-25 yrs, 2000+/-25 yrs
+
+* Related Work
+** Previous Work at higher level
+\pause
+*** Culturomics -- changes in human nature
+*** Language = Genetics?
+*** Scientific topics over time
+*** Changes in context reflecting events occuring at that time
+
+** How words themselves change?
+
+* WED formulation
+\pause
+** Classify period of time when a word was used
+\pause
+** Epoch = Period of 50 years
+\pause
+** Publication year of book $\sim$ Time when word is used
+
+* Experimental Setting -- Target Words
+** Driven by aim: Sense change or Context change?
+\pause
+*** Polysemous and Monosemous words
+*** Words frequent in all epochs and in one epoch
+\pause
+** 50 words for each open class (nouns, adj, verbs, and adv)
+*** 25 polysemous and 25 monosemous
+*** 10-5-5-5 frequency-wise distribution
+** 165 with enough examples
+
+* Experimental Setting -- Data
+** Top 100 snippets per target word per epoch
+** Processing snippets
+*** Tokenization
+*** POS tagging
+** POS Unambiguity
+* Experimental Setting -- Example
+1800: On reaching Mr. Crane’s house, \textbf{dinner}
+was set before us ; but as is usual here in many
+places on the Sabbath, it was both \textbf{dinner} and
+tea combined into a single meal.\vspace{4mm}
+
+1900: The average \textbf{dinner} of today consists
+of relishes; of soup, either a consomme (clear
+soup) or a thick soup.\vspace{4mm}
+
+2000: Preparing \textbf{dinner} in a slow cooker is
+easy and convenient because the meal you’re
+making requires little to no attention while it
+cooks.
+
+* Algorithm and Evalution
+** Local and Topical features (similar to Ng and Lee, 1996)
+# *** Current word, its POS, 1st noun before and after target word, etc.
+# *** Class-specific keywords, occuring at least 3 times in def. of class
+\pause
+** Naive Bayes Classifier (Ng and Lee, 2002)
+\pause
+** 10-fold Cross validation
+** Baseline: Most frequent class
+     
+* Results and Discussion
+** Absolute Improvement of 18.5%
+\pause
+*** "computer" (42%) and "install" (41%)
+*** "again" (3%) and "captivate" (7%)
+\pause
+** 2 kinds of analysis:
+*** Change in frequency
+*** Change in sense
+   
+* Results and Discussion contd.
+** Frequency change:
+*** Words frequent in all epochs v/s only in one epoch
+\pause
+** Sense change:
+*** Monosemous words
+**** Only changes in context helps
+*** Polysemous words
+**** Context change and
+**** Change in meaning
+
+* Results and Discussion contd.
+[[./pic.png]]
+
+* Conclusion
+** Differences in occurences of words in different epochs
+** Usage frequency and Word sense both contribute to these differences
+\pause
+** Future Work
+*** Feature selection
+*** Representation to track sense changes

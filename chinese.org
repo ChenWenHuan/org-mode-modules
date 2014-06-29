@@ -1,0 +1,6 @@
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Songti SC}
+*  中文标题一
+** 中文标题二
+
+- 这时正文！*加* -ddd-  h /xieti/ _xihuaxian_
