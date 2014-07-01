@@ -1,5 +1,13 @@
+# using these two lines on mac osx
 #+LATEX_HEADER: \usepackage{fontspec}
 #+LATEX_HEADER: \setmainfont{Songti SC}
+
+# using these two lines on ubuntu
+# linux中文需要这下面两行
+# +LATEX_HEADER: \usepackage{xeCJK}
+# +LATEX_HEADER: \setCJKmainfont{WenQuanYi Zen Hei Mono}
+
+
 *  中文标题一
 ** 中文标题二
 
