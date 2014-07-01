@@ -1,0 +1,139 @@
+#+TITLE:  2014-06 工作汇报 
+#+AUTHOR: Authors:wenhuan.chen 
+#+EMAIL:  wenhuan.chen@archermind.com 
+#+DATE:   2014-06-27 Friday 
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [bigger]
+#+BEAMER_FRAME_LEVEL: 3
+
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:2 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME: http://blog.csdn.net/cheneywh
+#+XSLT:
+
+#+BEAMER_THEME: Rochester [height=22pt]
+#+latex_header: \mode<beamer>{\usetheme{Madrid}}
+#+latex_header: \AtBeginSection[]{\begin{frame}<beamer>\frametitle{Topic}\tableofcontents[currentsection]\end{frame}}
+#+BEAMER_HEADER_EXTRA: \usetheme{Madrid}
+
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
+
+# linux中文需要这下面两行
+#+LATEX_HEADER: \usepackage{xeCJK}
+#+LATEX_HEADER: \setCJKmainfont{WenQuanYi Zen Hei Mono}
+
+* 工作内容介绍
+** 六月主要工作内容
+*** 1.完成ApnEditor程序                             :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+\pause
+*** 2.Engineer Tools: FieldTrial程序DM模块的重写[20%]                 :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+
+* APNEDITOR完成情况
+** Apn Editor 需求
+*** 1.作用与主要信息                                 :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :BEAMER_env: block
+    :END:
+    - 顾名思义,ApnEditor程序主要用来读取和改写手机里面的Apn信息.
+    - APN的主要信息构成,如右图                            
+*** 2.UI信息构成.                                :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.6
+    :BEAMER_act: <2->
+    :END:
+
+    #+CAPTION: original  
+    #+ATTR_LATEX: :width 5cm :height 6cm :options angle=0
+    [[file:~/Pictures/apnedit.png]]
+
+** Apn Editor UI 演变
+*** 第一次完成情况                                :B_block:BMCOL:
+   :PROPERTIES:
+   :BEAMER_env: block
+   :BEAMER_col: 0.4
+   :END:
+    #+CAPTION: first UI 
+    #+ATTR_LATEX: :width 5cm :height 6cm :options angle=0
+    [[file:~/Pictures/apnUI.png]]
+*** 再次完成情况                                 :B_block:BMCOL:
+   :PROPERTIES:
+   :BEAMER_env: block
+   :BEAMER_col: 0.5
+   :BEAMER_act: <2->
+   :END:
+    #+CAPTION: Second UI 
+    #+ATTR_LATEX: :width 5cm :height 6cm :options angle=0
+    [[file:~/Pictures/apnUI2.png]]
+
+
+** Apn Editor UI细节
+*** apn name                                     :B_block:
+   :PROPERTIES:
+   :BEAMER_env: block
+   :BEAMER_col: 0.2
+   :END:
+    #+CAPTION: apn name 
+    #+ATTR_LATEX: :width 2cm :height 5cm :options angle=0
+    [[file:~/Pictures/apnName.png]]
+*** name type                                                               :B_block:
+   :PROPERTIES:
+   :BEAMER_env: block
+   :BEAMER_col: 0.2
+   :END:
+    #+CAPTION: apn name type 
+    #+ATTR_LATEX: :width 2cm :height 5cm :options angle=0
+    [[file:~/Pictures/apnNameType.png]]
+
+*** apn pdn type                                 :B_block:
+   :PROPERTIES:
+   :BEAMER_env: block
+   :BEAMER_col: 0.2
+   :END:
+    #+CAPTION: apn pnd type 
+    #+ATTR_LATEX: :width 2cm :height 5cm :options angle=0
+    [[file:~/Pictures/apnPdnType.png]]
+*imljp.info** inactive timer                                 :B_block:
+   :PROPERTIES:
+   :BEAMER_env: block
+   :BEAMER_col: 0.2
+   :END:
+    #+CAPTION: apn inactive time 
+    #+ATTR_LATEX: :width 2cm :height 5cm :options angle=0
+    [[file:~/Pictures/apnInactiveTimer.png]]
+
+
+* Engineer Tools 程序 FieldTrial
+
+** FiledTrial需求:
+    - 更改FieldTrial程序中和低层通讯的方式,从LocalSocket 改成 File Processing
+
+** FiledTrial完成情况:[20%]
+   - Reading Documents. Familiar the DM commands.
+   - 前期遇到的问题:权限问题.
+     客户在台湾build的版本有权限,集成在本地没权限.代码一致. \\
+     aapt d permissions file.apk : Checking apk permissions
+
+* 时间去哪儿
+** 本月学习情况
+   - emacs org-mode 
+   - LaTex
+   - mathmatical
+   - basic of machine learning
+ 

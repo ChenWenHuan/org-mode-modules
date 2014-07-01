@@ -1,0 +1,47 @@
+# 在linux里面导出中文pdf要加入下面的两句
+#+LATEX_HEADER: \usepackage{xeCJK}
+#+LATEX_HEADER: \setCJKmainfont{WenQuanYi Zen Hei Mono}
+#+TITLE: 在org-mode里写数学公式
+#+AUTHOR: chen wenhuan
+#+EMAIL: chenwenhuan@gmail.com
+* 数学公式
+
+*上标下标
+$$f(x_1,x_2,x_x,\ldots,x_n)=x_1^2+x_2^2+\cdots+x_n^2$$
+$$\sum_{i=1}^{n}a_i = 0$$
+$$f(x)=x^{x^x}$$
+$$f(x,y,z)=3y^2z\left(3+\frac{7x+5}{1+y^2}\right)$$
+$$\left.\frac{du}{dx}\right|_{x=0}.$$
+
+\begin{eqnarray*}
+\cos2\theta = \cos^2(\theta)-\sin^2 \theta \\
+= 2\cos^2(\theta)-1\end{eqnarray*}
+
+$\chi(\lambda)$ of the $x\times3$
+matrix
+$$\left(\begin{array}{ccc}
+a & b & c\\
+d & e & f\\
+g & h & i\end{array}\right)$$
+
+\[\chi(\lambda)=\left|\begin{array}{ccc}
+\lambda-a & b & c\\
+d & \lambda-e & f\\
+g & h & \lambda-i\end{array}\right|\]
+
+$$\mbox{对于ren意的$x>0$},\mbox{有}f(x)>0$$
+
+
+$\frac{du}{dt}$ and $\frac{d^2 u}{dx^2}$
+
+
+$\frac{\partial u}{\partial t} = h^2\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}+\frac{\partial^2 u}{\partial z^2} \right)$
+
+
+$\lim\limits_{x\to+\infty}x=\infty$
+
+$\inf_{x>s}$
+
+$\sum\limits_{k=1}^n k^2 = \frac{1}{2} n(n+1)$
+
+$\int_{a}^{b}f(x)\,dx$
